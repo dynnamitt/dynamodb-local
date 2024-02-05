@@ -9,10 +9,11 @@ schema = $(call key_,t_name,HASH) $(call key_,timestamp,RANGE)
 fld_ = AttributeName=$1,AttributeType=$2
 key_ = AttributeName=$1,KeyType=$2
 
-
-dynamodb: db/DynamoDBLocal.jar | db/DynamoDBLocal_lib
+DB_JAR = DynamoDBLocal.jar
+DB_LIB = DynamoDBLocal_lib
+dynamodb: db/$(DB_JAR) | db/$(DB_LIB)
 	cd db; \
-	java -Djava.library.path=DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+	java -Djava.library.path=$(DB_LIB) -jar $(DB_JAR) -sharedDb
 
 %/DynamoDBLocal_lib: %/DynamoDBLocal.jar
 
