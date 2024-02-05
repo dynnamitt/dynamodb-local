@@ -28,6 +28,9 @@ delete:
 list:
 	aws dynamodb list-tables \
 		--endpoint-url $(ENDPOINT)
+	aws dynamodb describe-table \
+		--endpoint-url $(ENDPOINT) \
+		--table-name $(TBL_NAME)
 
 scan:
 	aws dynamodb scan \
