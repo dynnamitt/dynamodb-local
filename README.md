@@ -13,3 +13,4 @@ NOTE: use dummy-creds
 
 $ export AWS_PROFILE=localdyndb
 
+$ make # download and start
