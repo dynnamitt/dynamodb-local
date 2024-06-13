@@ -6,8 +6,8 @@ NOTE: use dummy-creds
   [localdyndb]
   cli_pager =
   region = .
-  aws_access_key_id = .
-  aws_secret_access_key = .
+  aws_access_key_id = .     # use REQUIRED TYPE of dummy val
+  aws_secret_access_key = . # use REQUIRED TYPE of dummy val
 ```
 
 
