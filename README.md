@@ -2,15 +2,18 @@
 NOTE: use dummy-creds
 
 ```toml
-  # ~/.aws/credentials 
+  # ~/.aws/config
   [localdyndb]
   cli_pager =
-  region = .
-  aws_access_key_id = .     # use REQUIRED TYPE of dummy val
-  aws_secret_access_key = . # use REQUIRED TYPE of dummy val
+  region = eu-west-1
+  aws_access_key_id = fake
+  aws_secret_access_key = fake
 ```
 
+  $ export AWS_PROFILE=localdyndb
 
-$ export AWS_PROFILE=localdyndb
+  $ make # download and start
 
-$ make # download and start
+  # Then in another shell:
+
+  $ make list
